@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cfaView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/cfaFullScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:visibility="gone" >
+
+        <WebView
+            android:id="@+id/fullScreenWebview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="35dp"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/fsSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="35dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:max="100" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/btnWebPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/btnWebNext"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/btnWebPrev"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/btnWebClose"
+                android:layout_width="35dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:padding="3dp"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/cfaContentFake"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/cfaContent"
+            android:layout_width="320dp"
+            android:layout_height="140dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="24dp"
+                android:layout_alignParentTop="true" >
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#D3D3D3"
+                    android:gravity="center"
+                    android:text="Label"
+                    android:textColor="#736F6E"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/cfaClose"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="right"
+                    android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="320dp"
+                android:layout_height="115dp"
+                android:layout_below="@+id/titleLayout"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spinner"
+                android:layout_width="320dp"
+                android:layout_height="115dp"
+                android:layout_below="@+id/titleLayout"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:src="#35a5bb" />
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:src="#35a5bb" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:src="#35a5bb" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="115dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="4dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="4dp" >
+
+    <TextView
+        android:id="@+id/dealsText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_horizontal"
+        android:lines="2"
+        android:maxLines="2"
+        android:text="Shoes shoes shoes shoes shoes shoes"
+        android:textSize="10sp" 
+        android:textColor="#000000"/>
+
+    <ImageButton
+        android:id="@+id/dealsImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
+        android:gravity="bottom"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>

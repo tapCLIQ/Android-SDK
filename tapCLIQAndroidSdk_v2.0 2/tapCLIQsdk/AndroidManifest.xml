@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tapcliq.sdk"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"/>
+
+    <service android:name="com.tapcliq.sdk.OpenUDID.OpenUDID_service" >
+        <intent-filter>
+            <action android:name="org.openudid.GETUDID" />
+        </intent-filter>
+    </service>
+
+</manifest>
